@@ -1267,31 +1267,27 @@
     .resource-card p { color: rgba(255,255,255,0.5); font-size: 0.83rem; line-height: 1.65; flex: 1; margin-bottom: 20px; }
     .btn-rc-soon { display: inline-flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.3); padding: 8px 18px; border-radius: 100px; font-size: 0.8rem; font-weight: 700; cursor: not-allowed; }
 
-    /* ========== JOSA COUNSELLING ========== */
-    #josa-counselling { background: linear-gradient(155deg, #0a1628 0%, var(--primary-dark) 100%); position: relative; overflow: hidden; }
-    #josa-counselling::before { content: ''; position: absolute; top: -120px; left: -120px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(244,168,37,0.06) 0%, transparent 65%); pointer-events: none; }
-    #josa-counselling::after { content: ''; position: absolute; bottom: -80px; right: -80px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(0,168,168,0.05) 0%, transparent 65%); pointer-events: none; }
-    #josa-counselling .section-label { background: rgba(244,168,37,0.15); color: var(--accent-light); border-color: rgba(244,168,37,0.3); }
-    #josa-counselling .section-title { color: #fff; }
-    #josa-counselling .section-title span { color: var(--accent); }
-    #josa-counselling .section-sub { color: rgba(255,255,255,0.6); }
-    .josa-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 32px 28px; transition: var(--transition); height: 100%; position: relative; overflow: hidden; display: flex; flex-direction: column; }
-    .josa-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--teal)); }
-    .josa-card:hover { border-color: rgba(244,168,37,0.25); transform: translateY(-4px); background: rgba(255,255,255,0.07); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
-    .josa-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(244,168,37,0.12); border: 1px solid rgba(244,168,37,0.25); color: var(--accent-light); padding: 4px 12px; border-radius: 100px; font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; width: fit-content; }
-    .josa-card h4 { color: #fff; font-size: 1.25rem; margin-bottom: 8px; }
-    .josa-card .josa-desc { color: rgba(255,255,255,0.55); font-size: 0.85rem; line-height: 1.7; flex: 1; margin-bottom: 20px; }
-    .josa-price { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 18px; }
-    .josa-price small { font-size: 0.9rem; color: rgba(255,255,255,0.4); font-weight: 600; }
-    .josa-features { list-style: none; padding: 0; margin-bottom: 24px; }
-    .josa-features li { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-bottom: 10px; }
-    .josa-features li i { color: var(--teal); font-size: 0.9rem; }
-    .btn-josa { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 14px 20px; background: linear-gradient(135deg, var(--accent) 0%, #e8920a 100%); border: none; border-radius: 12px; color: var(--primary-dark); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 800; letter-spacing: 0.5px; cursor: pointer; transition: var(--transition); text-decoration: none; }
-    .btn-josa:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(244,168,37,0.4); color: var(--primary-dark); }
-    .josa-note { text-align: center; margin-top: 40px; }
-    .josa-note p { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
-    .josa-note a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
-    .josa-note a:hover { color: var(--accent-light); }
+    /* ========== SUCCESS STORIES ========== */
+    #success-stories { background: linear-gradient(155deg, #0a1628 0%, var(--primary-dark) 100%); position: relative; overflow: hidden; }
+    #success-stories::before { content: ''; position: absolute; top: -120px; left: -120px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(244,168,37,0.06) 0%, transparent 65%); pointer-events: none; }
+    #success-stories::after { content: ''; position: absolute; bottom: -80px; right: -80px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(0,168,168,0.05) 0%, transparent 65%); pointer-events: none; }
+    #success-stories .section-label { background: rgba(244,168,37,0.15); color: var(--accent-light); border-color: rgba(244,168,37,0.3); }
+    #success-stories .section-title { color: #fff; }
+    #success-stories .section-title span { color: var(--accent); }
+    #success-stories .section-sub { color: rgba(255,255,255,0.6); }
+    .success-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 30px 26px; transition: var(--transition); height: 100%; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+    .success-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--teal)); }
+    .success-card:hover { border-color: rgba(244,168,37,0.25); transform: translateY(-4px); background: rgba(255,255,255,0.07); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+    .success-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(244,168,37,0.12); border: 1px solid rgba(244,168,37,0.25); color: var(--accent-light); padding: 4px 12px; border-radius: 100px; font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; width: fit-content; }
+    .success-card h4 { color: #fff; font-size: 1.25rem; margin-bottom: 6px; }
+    .success-card .success-achievement { color: var(--accent); font-size: 0.92rem; font-weight: 700; margin-bottom: 10px; }
+    .success-card .success-achievement i { margin-right: 6px; }
+    .success-meta { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 10px; }
+    .success-meta span { color: rgba(255,255,255,0.5); font-size: 0.78rem; display: flex; align-items: center; gap: 5px; }
+    .success-meta span i { color: var(--teal); font-size: 0.75rem; }
+    .success-desc { color: rgba(255,255,255,0.55); font-size: 0.85rem; line-height: 1.7; flex: 1; margin-bottom: 18px; }
+    .success-video-wrap { border-radius: 12px; overflow: hidden; background: rgba(0,0,0,0.3); }
+    .success-video-wrap iframe { display: block; }
 </style>
 </head>
 <body>
@@ -2084,68 +2080,50 @@ At Bhatia Master Classes (BMC), his mission is to help students achieve academic
   </div>
 </section>
 
-<!-- ============ JOSA COUNSELLING 2026 ============ -->
-<section id="josa-counselling" class="section-pad" aria-label="JoSSA 2026 Counselling">
+<!-- ============ SUCCESS STORIES ============ -->
+<section id="success-stories" class="section-pad" aria-label="Success Stories">
   <div class="container" style="position:relative;z-index:1;">
 
     <div class="section-header text-center reveal">
-      <div class="section-label">JoSSA 2026 Counselling</div>
-      <h2 class="section-title">Crack Your <span>JoSSA Choices</span></h2>
+      <div class="section-label">Success Stories</div>
+      <h2 class="section-title">Our <span>Results</span> Speak</h2>
       <div class="section-divider mx-auto"></div>
-      <p class="section-sub mx-auto">Get expertly arranged college and branch choices for JoSSA 2026 counselling. Maximise your chances of landing the best seat with data-backed strategy.</p>
+      <p class="section-sub mx-auto">Proud of our students who cracked JEE Advanced and B.Arch with outstanding performances.</p>
     </div>
 
     <div class="row g-4 justify-content-center">
 
-      <!-- Card 1 — JoSSA Guidelines -->
+      <!-- Card 1 — Lucky Rajoriya -->
       <div class="col-md-6 col-lg-5 reveal">
-        <div class="josa-card">
-          <span class="josa-badge"><i class="bi bi-star-fill"></i> Best Seller</span>
-          <h4>Complete JoSSA 2026 Guidelines</h4>
-          <p class="josa-desc">Get complete guidance for JoSSA 2026 counselling with 1:1 live interaction, choice updation after each round, and expert support throughout the process.</p>
-          <div class="josa-price">₹9999 <small>one-time</small></div>
-          <ul class="josa-features">
-            <li><i class="bi bi-check-circle-fill"></i> 1:1 live interaction</li>
-            <li><i class="bi bi-check-circle-fill"></i> Update choice after each round</li>
-            <li><i class="bi bi-check-circle-fill"></i> 600+ arranged choices</li>
-            <li><i class="bi bi-check-circle-fill"></i> All NITs, IIITs &amp; GFTIs covered</li>
-            <li><i class="bi bi-check-circle-fill"></i> Branch-wise priority logic PDF format — instant download</li>
-            <li><i class="bi bi-check-circle-fill"></i> Google Meet support</li>
-          </ul>
-          <a href="https://www.instamojo.com/@shyambhatia/l5648cc91a7d24ac4b45bc08efacefc04/" class="btn-josa" target="_blank" rel="noopener">
-            <i class="bi bi-cart-fill"></i> Buy on Instamojo
-          </a>
+        <div class="success-card">
+          <span class="success-badge"><i class="bi bi-mortarboard-fill"></i> JEE Advanced 2026</span>
+          <h4>Lucky Rajoriya</h4>
+          <p class="success-achievement"><i class="bi bi-trophy-fill"></i> IIT Guwahati — Mechanical Engineering</p>
+          <div class="success-meta">
+            <span><i class="bi bi-person-badge"></i> Reg: MP13BMC22042008</span>
+            <span><i class="bi bi-book"></i> Parrot Eye Batch</span>
+            <span><i class="bi bi-laptop"></i> Offline Mode</span>
+          </div>
+          <p class="success-desc">Heartiest congratulations to Lucky Rajoriya for securing a genuine rank at Ujjain BMC. Dropper (One Year Program) — offline mode.</p>
+          <div class="success-video-wrap">
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/share/v/1GjbZrnujn/&show_text=false" width="100%" height="400" style="border:none;overflow:hidden;border-radius:12px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
         </div>
       </div>
 
-      <!-- Card 2 — 600 Choices -->
+      <!-- Card 2 — Hrishit Dubey -->
       <div class="col-md-6 col-lg-5 reveal">
-        <div class="josa-card">
-          <span class="josa-badge"><i class="bi bi-lightning-charge-fill"></i> Popular</span>
-          <h4>600 ++ Arranged Choices</h4>
-          <p class="josa-desc">We have arranged choices as per your branch demands and what you get rank in JEE — just a proper optimization performed here.</p>
-          <div class="josa-price">₹999 <small>one-time</small></div>
-          <ul class="josa-features">
-            <li><i class="bi bi-check-circle-fill"></i> 600++ arranged choices</li>
-            <li><i class="bi bi-check-circle-fill"></i> Branch-wise priority logic</li>
-            <li><i class="bi bi-check-circle-fill"></i> Optimized as per your JEE rank</li>
-            <li><i class="bi bi-check-circle-fill"></i> PDF format — instant download</li>
-          </ul>
-          <a href="https://shyambhatia.myinstamojo.com/product/jossacsab600choices" class="btn-josa" target="_blank" rel="noopener">
-            <i class="bi bi-cart-fill"></i> Buy on Instamojo
-          </a>
+        <div class="success-card">
+          <span class="success-badge"><i class="bi bi-pencil-fill"></i> B.Arch 2026</span>
+          <h4>Hrishit Dubey</h4>
+          <p class="success-achievement"><i class="bi bi-trophy-fill"></i> B.Arch — Drawing Exam Cleared</p>
+          <p class="success-desc">उज्जैन में पहली बार बी.आर्क की कक्षाएं और परिणाम। Trained under Prabhakar Kumar, Chief Mentor (M.Des., IIT Delhi).</p>
+          <div class="success-video-wrap">
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1356454676356694&show_text=false" width="100%" height="400" style="border:none;overflow:hidden;border-radius:12px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
         </div>
       </div>
 
-    </div>
-
-    <div class="josa-note reveal">
-      <p>
-        <i class="bi bi-shield-check me-1" style="color:var(--teal);"></i>
-        Secure checkout via Instamojo &middot;
-        Instant PDF download after payment &middot;
-        <a href="https://shyambhatia.myinstamojo.com/" target="_blank" rel="noopener">Visit BMC Store <i class="bi bi-box-arrow-up-right"></i></a>
-      </p>
     </div>
 
   </div>
