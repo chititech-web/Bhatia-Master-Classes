@@ -36,6 +36,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="image/favicon.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="image/favicon-96.png" />
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+
 <!-- Bootstrap 5 -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
@@ -1338,7 +1347,45 @@
         "longitude": "75.7885"
       },
       "areaServed": "Ujjain",
-      "foundingDate": "2014"
+      "foundingDate": "2014",
+      "sameAs": [
+        "https://www.facebook.com/people/Bhatia-Master-Classes/61573524879555/"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.bhatiamasterclasses.com/#localbusiness",
+      "name": "Bhatia Master Classes",
+      "description": "Best JEE & NEET Coaching Institute in Ujjain, Madhya Pradesh",
+      "url": "https://www.bhatiamasterclasses.com",
+      "telephone": "+91-9516210209",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10/1 Kalidas Marg, Maxi Road, Near Freeganj Tower, Near Narmade Ayurvedam",
+        "addressLocality": "Ujjain",
+        "addressRegion": "Madhya Pradesh",
+        "postalCode": "456010",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "23.1765",
+        "longitude": "75.7885"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "19:00" }
+      ],
+      "priceRange": "₹",
+      "areaServed": "Ujjain",
+      "foundingDate": "2014",
+      "sameAs": [
+        "https://www.facebook.com/people/Bhatia-Master-Classes/61573524879555/"
+      ]
     },
     {
       "@type": "Course",
@@ -1433,20 +1480,6 @@
 </head>
 <body>
 
-<!-- Visually-hidden headings for SEO structure -->
-<h1 class="visually-hidden">Best JEE & NEET Coaching Institute in Ujjain – Bhatia Master Classes</h1>
-
-<h2 class="visually-hidden">Why Choose Bhatia Master Classes</h2>
-<h3 class="visually-hidden">Expert Faculty with 12+ Years Experience</h3>
-<h3 class="visually-hidden">Daily Practice Papers & PYQ Analysis</h3>
-
-<h2 class="visually-hidden">Courses Offered</h2>
-<h3 class="visually-hidden">JEE Main & Advanced Coaching</h3>
-<h3 class="visually-hidden">NEET Preparation Program</h3>
-
-<h2 class="visually-hidden">Outstanding Results</h2>
-<h3 class="visually-hidden">AIR 9, 36, 42, 48, 199</h3>
-
 <!-- ============ NAVBAR ============ -->
 <nav id="mainNav" class="navbar navbar-expand-lg py-2" role="navigation" aria-label="Main navigation">
   <div class="container">
@@ -1493,7 +1526,7 @@
           <i class="bi bi-star-fill" style="font-size:0.75rem;"></i>
           Ujjain's #1 JEE · NEET Coaching
         </div>
-        <h1 class="reveal">Master Your Exams<br>with <span>Bhatia Master Classes</span></h1>
+        <h1 class="reveal">Best JEE &amp; NEET Coaching Institute in <span>Ujjain</span> — Master Your Exams with Bhatia Master Classes</h1>
         <p class="lead reveal">Expert coaching for JEE, NEET & Foundation. Proven methods, daily practice, and results that speak for themselves.</p>
         <div class="d-flex flex-wrap gap-3 reveal">
           <a href="#admissions" class="btn-primary-custom">
@@ -2784,9 +2817,7 @@ At Bhatia Master Classes (BMC), his mission is to help students achieve academic
         </div>
         <p class="footer-tagline">Ujjain's most trusted coaching institute for JEE, NEET & Foundation since 2025.</p>
         <div class="social-links">
-          <a href="#" class="social-btn" aria-label="Follow us on Twitter / X"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="social-btn" aria-label="Follow us on Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="social-btn" aria-label="Follow us on YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.facebook.com/people/Bhatia-Master-Classes/61573524879555/" class="social-btn" aria-label="Follow us on Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
           <a href="https://wa.me/9516210209" class="social-btn" aria-label="Contact on WhatsApp" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
@@ -2819,10 +2850,10 @@ At Bhatia Master Classes (BMC), his mission is to help students achieve academic
       <div class="col-sm-6 col-lg-3">
         <h5>Contact</h5>
         <ul class="footer-links">
-          <li><i class="bi bi-geo-alt me-2"></i>10/1 Kalidas marg , Maxi road , Neat Free ganj tower , Near Narmade Ayurvedam , Ujjain</li>
+          <li itemscope itemtype="https://schema.org/PostalAddress"><i class="bi bi-geo-alt me-2"></i><span itemprop="streetAddress">10/1 Kalidas Marg, Maxi Road, Near Freeganj Tower</span>, <span itemprop="addressLocality">Ujjain</span>, <span itemprop="addressRegion">Madhya Pradesh</span> <span itemprop="postalCode">456010</span></li>
           <li><a href="tel:+919516210209"><i class="bi bi-telephone me-2"></i>+91 9516210209</a></li>
           <li><a href="mailto:info@bhatiamasterclasses.com"><i class="bi bi-envelope me-2"></i>info@bhatiamasterclasses.com</a></li>
-          <li><a href="https://www.google.com/maps?cid=YOUR_PLACE_ID" target="_blank" rel="noopener"><i class="bi bi-google me-2"></i>View on Google Maps</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Bhatia+Master+Classes+Ujjain" target="_blank" rel="noopener"><i class="bi bi-google me-2"></i>View on Google Maps</a></li>
         </ul>
       </div>
     </div>
