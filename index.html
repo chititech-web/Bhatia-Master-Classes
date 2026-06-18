@@ -1289,6 +1289,28 @@
     .success-desc { color: rgba(255,255,255,0.55); font-size: 0.85rem; line-height: 1.7; flex: 1; margin-bottom: 18px; }
     .success-video-wrap { border-radius: 12px; overflow: hidden; background: rgba(0,0,0,0.3); }
     .success-video-wrap iframe { display: block; }
+    .success-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .success-share { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.6); padding: 8px 16px; border-radius: 100px; font-size: 0.78rem; font-weight: 700; text-decoration: none; transition: var(--transition); }
+    .success-share:hover { background: rgba(255,255,255,0.1); border-color: rgba(244,168,37,0.3); color: var(--accent-light); }
+    .success-cta-wa { display: inline-flex; align-items: center; gap: 6px; background: rgba(37,211,102,0.12); border: 1px solid rgba(37,211,102,0.25); color: #4ade80; padding: 8px 16px; border-radius: 100px; font-size: 0.78rem; font-weight: 700; text-decoration: none; transition: var(--transition); }
+    .success-cta-wa:hover { background: #25D366; border-color: #25D366; color: #fff; transform: translateY(-1px); }
+    /* ========== FAQ ========== */
+    #faq { background: linear-gradient(155deg, #0a1628 0%, var(--primary-dark) 100%); position: relative; overflow: hidden; }
+    #faq::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0,168,168,0.05) 0%, transparent 65%); pointer-events: none; }
+    #faq .section-label { background: rgba(244,168,37,0.15); color: var(--accent-light); border-color: rgba(244,168,37,0.3); }
+    #faq .section-title { color: #fff; }
+    #faq .section-title span { color: var(--accent); }
+    #faq .section-sub { color: rgba(255,255,255,0.6); }
+    .faq-accordion { max-width: 780px; margin: 0 auto; }
+    .faq-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+    .faq-item:last-child { margin-bottom: 0; }
+    .faq-question { width: 100%; padding: 18px 22px; background: none; border: none; color: #fff; font-family: 'DM Sans',sans-serif; font-size: 0.95rem; font-weight: 600; text-align: left; display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer; transition: var(--transition); }
+    .faq-question:hover { background: rgba(255,255,255,0.03); }
+    .faq-question i { color: var(--accent); font-size: 0.8rem; transition: transform 0.3s ease; flex-shrink: 0; }
+    .faq-question[aria-expanded="true"] i { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0 22px; }
+    .faq-answer.open { max-height: 300px; padding: 0 22px 18px; }
+    .faq-answer p { color: rgba(255,255,255,0.6); font-size: 0.88rem; line-height: 1.7; margin: 0; }
 </style>
 <script type="application/ld+json">
 {
@@ -1443,6 +1465,8 @@
         <li class="nav-item"><a class="nav-link" href="#pyq">PYQ</a></li>
         <li class="nav-item"><a class="nav-link" href="#free-resources">Free Resources</a></li>
         <li class="nav-item"><a class="nav-link" href="#video-gallery">Videos</a></li>
+        <li class="nav-item"><a class="nav-link" href="jee-coaching-ujjain.html">JEE</a></li>
+        <li class="nav-item"><a class="nav-link" href="neet-coaching-ujjain.html">NEET</a></li>
         <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         <li class="nav-item ms-lg-2">
@@ -2227,6 +2251,11 @@ At Bhatia Master Classes (BMC), his mission is to help students achieve academic
           <div class="success-video-wrap">
             <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/2212343672899914&show_text=false" width="100%" height="400" style="border:none;overflow:hidden;border-radius:12px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
           </div>
+          <div class="success-actions">
+            <a href="https://wa.me/?text=%F0%9F%8F%86%20Lucky%20Rajoriya%20from%20Bhatia%20Master%20Classes%20Ujjain%20cracked%20IIT%20Guwahati%20-%20Mechanical%20Engineering!%20Watch%3A%20https%3A%2F%2Fwww.bhatiamasterclasses.com%2F%23success-stories" target="_blank" rel="noopener" class="success-share"><i class="bi bi-whatsapp"></i> Share on WhatsApp</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.bhatiamasterclasses.com%2F%23success-stories" target="_blank" rel="noopener" class="success-share"><i class="bi bi-facebook"></i> Share on Facebook</a>
+            <a href="https://wa.me/9516210209?text=Hi%20BMC!%20I%20want%20results%20like%20Lucky%20Rajoriya.%20Please%20tell%20me%20about%20your%20JEE%20coaching%20program." target="_blank" rel="noopener" class="success-cta-wa"><i class="bi bi-chat-dots-fill"></i> Want results like Lucky?</a>
+          </div>
         </div>
       </div>
 
@@ -2240,6 +2269,99 @@ At Bhatia Master Classes (BMC), his mission is to help students achieve academic
           <div class="success-video-wrap">
             <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1356454676356694&show_text=false" width="100%" height="400" style="border:none;overflow:hidden;border-radius:12px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
           </div>
+          <div class="success-actions">
+            <a href="https://wa.me/?text=%F0%9F%8F%86%20Hrishit%20Dubey%20cleared%20B.Arch%20Drawing%20Exam%20from%20Bhatia%20Master%20Classes%20Ujjain!%20Watch%3A%20https%3A%2F%2Fwww.bhatiamasterclasses.com%2F%23success-stories" target="_blank" rel="noopener" class="success-share"><i class="bi bi-whatsapp"></i> Share on WhatsApp</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.bhatiamasterclasses.com%2F%23success-stories" target="_blank" rel="noopener" class="success-share"><i class="bi bi-facebook"></i> Share on Facebook</a>
+            <a href="https://wa.me/9516210209?text=Hi%20BMC!%20I%20want%20results%20like%20Hrishit%20Dubey.%20Please%20tell%20me%20about%20your%20B.Arch%20training%20program." target="_blank" rel="noopener" class="success-cta-wa"><i class="bi bi-chat-dots-fill"></i> Want results like Hrishit?</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="section-pad" aria-label="Frequently asked questions">
+  <div class="container" style="position:relative;z-index:1;">
+
+    <div class="section-header text-center reveal">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+      <div class="section-divider mx-auto"></div>
+      <p class="section-sub mx-auto">Everything you need to know about Bhatia Master Classes — admissions, courses, fees and more.</p>
+    </div>
+
+    <div class="faq-accordion reveal">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Which is the best coaching for JEE in Ujjain?
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Bhatia Master Classes is widely recognised as one of the best coaching institutes for JEE preparation in Ujjain, with expert faculty, structured DPP sheets, PYQ analysis and consistent results including top AIR ranks and IIT selections like Lucky Rajoriya (IIT Guwahati Mechanical).</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          What is the fee structure for JEE and NEET coaching?
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Bhatia Master Classes offers affordable coaching with flexible fee payment options. Call <a href="tel:+919516210209" style="color:var(--accent);font-weight:600;">+91-9516210209</a> or visit our institute at Freeganj, Ujjain for the detailed fee structure and available scholarships.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Does Bhatia Master Classes offer both JEE and NEET coaching?
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Yes! Bhatia Master Classes offers comprehensive coaching for both <a href="jee-coaching-ujjain.html" style="color:var(--accent);font-weight:600;">JEE Main & Advanced</a> and <a href="neet-coaching-ujjain.html" style="color:var(--accent);font-weight:600;">NEET UG</a>, along with foundation courses for class 9th-10th and crash courses, all under one roof with dedicated faculty for each subject.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Where is Bhatia Master Classes located in Ujjain?
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>We are located at 10/1 Kalidas Marg, Maxi Road, Near Freeganj Tower, Near Narmade Ayurvedam, Ujjain, Madhya Pradesh - 456010. Our location is easily accessible from Freeganj, Madhav Club road and Sanwer Road.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Do you offer demo classes before enrollment?
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Yes! Bhatia Master Classes offers free demo classes for prospective students. Call <a href="tel:+919516210209" style="color:var(--accent);font-weight:600;">+91-9516210209</a> or <a href="https://wa.me/9516210209" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">WhatsApp us</a> to schedule your free demo class and experience our teaching methodology firsthand.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Does Bhatia Master Classes have a dropper batch?
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, our Parrot Eye batch is specially designed for dropper students (One Year Program) preparing for JEE Main, Advanced and NEET. Lucky Rajoriya (IIT Guwahati Mechanical) is a proud product of our Parrot Eye batch. The program focuses on intensive practice, mock tests and personalized mentorship.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          How can I enroll for coaching at Bhatia Master Classes?
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>You can enroll by visiting our institute at Freeganj, Ujjain between 9 AM to 7 PM (Mon-Sat), or call <a href="tel:+919516210209" style="color:var(--accent);font-weight:600;">+91-9516210209</a> for admission guidance. You can also <a href="https://wa.me/9516210209" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">chat with us on WhatsApp</a> for quick inquiries.</p>
         </div>
       </div>
 
@@ -2653,6 +2775,8 @@ At Bhatia Master Classes (BMC), his mission is to help students achieve academic
           <li><a href="#test-series">Test Series</a></li>
           <li><a href="#pyq">PYQ</a></li>
           <li><a href="#free-resources">Free Resources</a></li>
+          <li><a href="jee-coaching-ujjain.html">JEE Coaching</a></li>
+          <li><a href="neet-coaching-ujjain.html">NEET Coaching</a></li>
           <li><a href="live-class.html">Live Classes</a></li>
           <li><a href="#admissions">Admissions</a></li>
         </ul>
@@ -2660,8 +2784,8 @@ At Bhatia Master Classes (BMC), his mission is to help students achieve academic
       <div class="col-sm-6 col-lg-3">
         <h5>Courses</h5>
         <ul class="footer-links">
-          <li><a href="#admissions">JEE Mains + Advanced</a></li>
-          <li><a href="#admissions">NEET UG Preparation</a></li>
+          <li><a href="jee-coaching-ujjain.html">JEE Mains + Advanced</a></li>
+          <li><a href="neet-coaching-ujjain.html">NEET UG Preparation</a></li>
           <li><a href="#admissions">Foundation (9–10)</a></li>
           <li><a href="#admissions">Crash Courses</a></li>
           <li><a href="#admissions">Revision Batches</a></li>
@@ -3670,6 +3794,14 @@ document.addEventListener('keydown', function(e) {
     }
   }, 400);
 })();
+
+/* ========== FAQ TOGGLE ========== */
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', !expanded);
+  answer.classList.toggle('open');
+}
 </script>
 </body>
 </html>
