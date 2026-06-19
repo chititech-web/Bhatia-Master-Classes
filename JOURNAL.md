@@ -447,6 +447,11 @@ Video files are large — **do not commit them to git** (GitHub has a 100MB file
 - [x] **Course Enquiry Buttons** — Hero CTAs, course card "Enquire Now" buttons, bottom CTAs all route through modal
 - [x] **Contact Section** — "Chat with us" link updated to use modal
 
+#### Phase 1.9 — Late-June 2026 (Google Maps & Local Presence)
+- [x] **Google Maps Embed** — Added responsive iframe map to `index.html` Contact section showing the institute location (10/1 Kalidas Marg, Freeganj, Ujjain)
+- [x] **Open in Google Maps Link** — "Open in Google Maps" link below the embed for mobile directions
+- [x] **Responsive Map** — 360px height on desktop, 240px on mobile, rounded corners with shadow, `loading="lazy"` for performance
+
 ---
 
 ## 7. Known Issues & Bugs
