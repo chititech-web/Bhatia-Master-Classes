@@ -722,6 +722,13 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 1.1rem; cursor: pointer; transition: var(--transition);
     }
+    .wa-status {
+      display: none; padding: 10px 14px; border-radius: 8px;
+      font-size: 0.85rem; font-weight: 600; text-align: center;
+    }
+    .wa-status.show { display: block; }
+    .wa-status.success { background: #f0fdf4; color: #16A34A; border: 1px solid #86efac; }
+    .wa-status.error { background: #fef2f2; color: #dc2626; border: 1px solid #fca5a5; }
     .modal-close:hover { background: rgba(255,255,255,0.25); }
     .modal-body-custom { padding: 28px; }
     .question-display {
@@ -2425,7 +2432,7 @@ At Bhatia Master Classes (BMC), his mission is to help students achieve academic
           <a href="#admissions" class="btn-primary-custom" style="text-decoration:none;">
             <i class="bi bi-mortarboard-fill"></i> Enroll in Parrot Eye Batch
           </a>
-          <a href="https://wa.me/9516210209" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.2);padding:12px 24px;border-radius:10px;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.5px;text-decoration:none;transition:var(--transition);">
+          <a href="#" onclick="openWAChat('general');return false;" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.2);padding:12px 24px;border-radius:10px;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.5px;text-decoration:none;transition:var(--transition);">
             <i class="bi bi-whatsapp"></i> Get Free Counselling
           </a>
         </div>
@@ -2918,7 +2925,7 @@ At Bhatia Master Classes (BMC), his mission is to help students achieve academic
         <div class="contact-card text-center">
           <div class="contact-icon-wrap mx-auto" style="background:#25D366;"><i class="bi bi-whatsapp"></i></div>
           <h5 style="font-size:1.1rem;margin-bottom:8px;">WhatsApp</h5>
-          <a href="https://wa.me/919516210209" target="_blank" rel="noopener"
+          <a href="#" onclick="openWAChat('general');return false;"
              style="font-size:0.9rem;color:#16A34A;font-weight:600;">Chat with us</a><br>
           <span style="font-size:0.8rem;color:var(--text-muted);">Quick replies guaranteed</span>
         </div>
@@ -2991,7 +2998,7 @@ At Bhatia Master Classes (BMC), his mission is to help students achieve academic
 </footer>
 
 <!-- ============ WHATSAPP FLOAT ============ -->
-<a href="https://wa.me/919516210209" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<a href="#" class="whatsapp-float" onclick="openWAChat('general');return false;" aria-label="Chat on WhatsApp">
   <i class="bi bi-whatsapp"></i>
 </a>
 
@@ -3533,6 +3540,76 @@ a) 5/3           b) 5/4          c) 5/2        d) None of this.
   </div>
 </div>
 
+<!-- ============ WHATSAPP PRE-CHAT MODAL ============ -->
+<div id="waChatModal" class="modal-custom" role="dialog" aria-modal="true" aria-labelledby="waChatTitle">
+  <div class="modal-box" style="max-width:480px;">
+    <div class="modal-header-custom" style="background:linear-gradient(135deg,#128C7E,#075E54);">
+      <button class="modal-close" onclick="closeWAChat()" aria-label="Close">&times;</button>
+      <h3 id="waChatTitle"><i class="bi bi-whatsapp" style="color:#fff;"></i> Chat with Us</h3>
+      <p>Tell us about yourself — we'll connect you to the right team.</p>
+    </div>
+    <div class="modal-body-custom">
+      <form id="waChatForm" novalidate onsubmit="return submitWAChat()">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label class="form-label-reg" for="waName">Full Name *</label>
+            <input type="text" id="waName" class="form-control-reg" placeholder="Your name" required>
+            <div class="error-msg">Name is required.</div>
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label-reg" for="waPhone">Phone / WhatsApp *</label>
+            <input type="tel" id="waPhone" class="form-control-reg" placeholder="10-digit number" pattern="[6-9][0-9]{9}" required>
+            <div class="error-msg">Enter a valid 10-digit number.</div>
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label-reg" for="waClass">Class *</label>
+            <select id="waClass" class="form-control-reg" required>
+              <option value="">— Select —</option>
+              <option>Class 11</option>
+              <option>Class 12</option>
+              <option>Dropper</option>
+              <option>Other</option>
+            </select>
+            <div class="error-msg">Please select your class.</div>
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label-reg" for="waStream">Stream *</label>
+            <select id="waStream" class="form-control-reg" required>
+              <option value="">— Select —</option>
+              <option>JEE</option>
+              <option>NEET</option>
+              <option>Foundation</option>
+              <option>Not Sure</option>
+            </select>
+            <div class="error-msg">Please select your stream.</div>
+          </div>
+          <div class="col-12">
+            <label class="form-label-reg" for="waQuery">I'm interested in *</label>
+            <select id="waQuery" class="form-control-reg" required>
+              <option value="">— Select —</option>
+              <option>Admission & Enrollment</option>
+              <option>Fee Structure</option>
+              <option>Demo Class</option>
+              <option>Study Material / DPP</option>
+              <option>Free Resources</option>
+              <option>General Inquiry</option>
+            </select>
+            <div class="error-msg">Please select your query type.</div>
+          </div>
+          <div class="col-12">
+            <div id="waChatStatus" class="wa-status"></div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn-submit-modal" id="waChatSubmitBtn">
+              <i class="bi bi-whatsapp me-2"></i> Send on WhatsApp
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 <!-- ============ BRANDED SHARE SHEET ============ -->
 <div id="shareSheetModal" role="dialog" aria-modal="true" aria-label="Share Question">
   <div class="share-sheet-box" style="margin:0 auto;">
@@ -3651,6 +3728,103 @@ function saveLead(source) {
     localStorage.setItem('bmc_leads', JSON.stringify(existing));
   }
 }
+
+
+/* ========== WHATSAPP AUTO-REPLY CHAT ========== */
+/* Contexts: general | admission | jee | neet | demo | dpp | test-series | fee | resources */
+function openWAChat(context) {
+  document.getElementById('waChatForm').reset();
+  clearErrors(document.getElementById('waChatForm'));
+  document.getElementById('waChatStatus').classList.remove('show', 'success', 'error');
+  document.getElementById('waChatStatus').textContent = '';
+  document.getElementById('waChatSubmitBtn').disabled = false;
+  document.getElementById('waChatSubmitBtn').innerHTML = '<i class="bi bi-whatsapp me-2"></i> Send on WhatsApp';
+
+  // Pre-select stream based on context
+  const streamMap = { jee: 'JEE', neet: 'NEET', foundation: 'Foundation' };
+  if (streamMap[context]) document.getElementById('waStream').value = streamMap[context];
+
+  // Pre-select query based on context
+  const queryMap = {
+    admission: 'Admission & Enrollment', demo: 'Demo Class',
+    dpp: 'Study Material / DPP', fee: 'Fee Structure',
+    resources: 'Free Resources', 'test-series': 'Study Material / DPP'
+  };
+  if (queryMap[context]) document.getElementById('waQuery').value = queryMap[context];
+
+  // Store context for submit handler
+  document.getElementById('waChatForm').dataset.context = context;
+  document.getElementById('waChatModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeWAChat() {
+  document.getElementById('waChatModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+function submitWAChat() {
+  const form = document.getElementById('waChatForm');
+  if (!validateForm(form)) return false;
+
+  const name   = document.getElementById('waName').value.trim();
+  const phone  = document.getElementById('waPhone').value.trim();
+  const cls    = document.getElementById('waClass').value;
+  const stream = document.getElementById('waStream').value;
+  const query  = document.getElementById('waQuery').value;
+  const context = form.dataset.context || 'general';
+
+  const status = document.getElementById('waChatStatus');
+  const btn = document.getElementById('waChatSubmitBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i> Opening WhatsApp...';
+
+  const waNumber = '919516210209';
+
+  const template = `Hi Bhatia Master Classes! 👋
+
+*Student Details*
+• Name: ${name}
+• Phone: ${phone}
+• Class: ${cls}
+• Stream: ${stream}
+
+*Query:* ${query}
+
+I look forward to your guidance. 🙏
+_– via bhatiamasterclasses.com_`;
+
+  const waURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(template)}`;
+
+  setTimeout(() => {
+    window.open(waURL, '_blank');
+
+    status.className = 'wa-status show success';
+    status.textContent = '✅ WhatsApp opened! We\'ll reply to your query shortly.';
+    btn.innerHTML = '<i class="bi bi-check-circle me-2"></i> Sent!';
+
+    // Save lead to admin panel
+    const lead = { name, phone, class: cls, stream, query, source: 'wa-chat-' + context, timestamp: new Date().toISOString() };
+    const existing = JSON.parse(localStorage.getItem('bmc_leads') || '[]');
+    const isDup = existing.some(l => l.phone === phone && l.source === lead.source);
+    if (!isDup) {
+      existing.push(lead);
+      localStorage.setItem('bmc_leads', JSON.stringify(existing));
+    }
+  }, 800);
+
+  return false;
+}
+
+/* Close modal on backdrop click */
+document.getElementById('waChatModal').addEventListener('click', function(e) {
+  if (e.target === this) closeWAChat();
+});
+
+/* Close on Escape */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeWAChat();
+});
 
 
 /* ========== BRANDED SHARE SHEET ========== */

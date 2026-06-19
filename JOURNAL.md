@@ -434,6 +434,19 @@ Video files are large — **do not commit them to git** (GitHub has a 100MB file
 - [x] **JSON-LD priceRange** — Changed from `₹` (inexpensive) to `₹₹` (moderate) across all 5 marketing pages
 - [x] **FAQ Answers** — Homepage FAQ fee answers updated to ₹40K–80K range
 
+#### Phase 1.8 — Late-June 2026 (WhatsApp Auto-Reply & Lead Capture)
+
+**WhatsApp Pre-Chat Modal**
+- [x] **Lead Capture Modal** — Pre-chat overlay on all 5 marketing pages. Collects: Name, Phone, Class (11th/12th/Dropper), Stream (JEE/NEET/Foundation), Query Type (Admission/Fee/Demo/Study Material/General)
+- [x] **Context-Aware Stream Pre-Select** — JEE pages auto-select JEE stream, NEET pages auto-select NEET stream, homepage uses general
+- [x] **Structured Message Template** — Generates a formatted WhatsApp message with all lead details before opening the chat
+- [x] **Auto-Save to Leads DB** — Every WhatsApp lead is saved to `bmc_leads` in localStorage (visible in admin panel)
+
+**CTA Integration**
+- [x] **WhatsApp Float** — Updated on all 5 pages to open modal instead of direct chat
+- [x] **Course Enquiry Buttons** — Hero CTAs, course card "Enquire Now" buttons, bottom CTAs all route through modal
+- [x] **Contact Section** — "Chat with us" link updated to use modal
+
 ---
 
 ## 7. Known Issues & Bugs
@@ -514,7 +527,7 @@ Video files are large — **do not commit them to git** (GitHub has a 100MB file
 | Remove OTP dev-mode banner from production | `[FRONTEND]` | 🟠 High | Pending | One line CSS change |
 | NEET 2026 Guess Paper section | `[FRONTEND]` `[CONTENT]` | 🟠 High | ✅ Done | Added April 2026 |
 | Add Google Analytics tracking | `[DEVOPS]` `[CONTENT]` | 🟡 Medium | Pending | Client needs GA4 property |
-| Add WhatsApp chat widget (Tawk.to or similar) | `[FRONTEND]` | 🟡 Medium | Pending | Free service |
+| WhatsApp auto-reply pre-chat lead capture | `[FRONTEND]` | 🟢 High | ✅ Done | Pre-chat modal with name, class, stream, query capture — saves to bmc_leads + opens WA with structured message |
 | Add more DPP files (Biology, remaining Physics) | `[CONTENT]` | 🟡 Medium | Pending | Client to provide PDFs |
 | JEE Mains PYQ packs | `[CONTENT]` | 🟡 Medium | Pending | Client to provide PDFs |
 | NEET PYQ packs | `[CONTENT]` | 🟡 Medium | Pending | Client to provide PDFs |
