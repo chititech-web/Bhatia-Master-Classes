@@ -411,6 +411,29 @@ Video files are large — **do not commit them to git** (GitHub has a 100MB file
 - [x] **Tech Head Attribution** — Footer now credits "Built with ♥ by Chiti Technologies" linking to chiti.tech
 - [x] **Tech Head Role** — Added `[TECH HEAD]` section to team guide documenting Prabhakar as System Architect & Lead Developer
 
+#### Phase 1.7 — Mid-June 2026 (SEO & Navbar Overhaul)
+
+**Social & Analytics**
+- [x] **Facebook URL Fixed** — Replaced `/people/Bhatia-Master-Classes/61573524879555/` with `https://www.facebook.com/shyambhatia123` across all 5 marketing pages (JSON-LD `sameAs` + footer social buttons)
+- [x] **YouTube Channel Added** — `https://www.youtube.com/@BhatiaMasterClass` added to JSON-LD `sameAs` arrays + footer social button sections on all 5 marketing pages
+- [x] **GA4 Integration** — Google Analytics tag `G-WD66PL7VGY` placed in `<head>` of all 11 HTML files
+
+**Navbar Redesign (Card Sorting)**
+- [x] **Navbar Simplified** — Flat 12-item list → structured 2-dropdown layout. *Programs ▼* groups JEE, NEET & comparison guides. *Resources ▼* groups DPP, Test Series, PYQ, Free Resources, Videos
+- [x] **Dropdown CSS** — Dark theme dropdowns with gold accent hover states, rounded borders, proper z-index
+- [x] **Mobile Dropdowns** — Responsive styles: dropdowns flatten inline under hamburger menu, transparent background, indented sub-items
+
+**Local SEO — Freeganj Keyword Targeting**
+- [x] **Titles & H1s** — "Freeganj, Ujjain" keyword added to titles, H1 headings, and meta descriptions on all 5 marketing pages
+- [x] **Hero Badge** — "Best Coaching in Ujjain" → "Best Coaching in Freeganj, Ujjain" on `index.html`
+- [x] **NEET Callout** — NEET section title updated to "NEET Offline Coaching in Freeganj, Ujjain"
+- [x] **Parrot Eye Dropper Batch** — New dropper batch section added to `index.html` targeting "JEE dropper batch Ujjain" keyword
+
+**Pricing & Schema**
+- [x] **Fee Ranges Updated** — Comparison tables now show BMC ₹40K–80K/yr vs Aakash/Allen ₹80K–1.2L/yr (all 5 pages)
+- [x] **JSON-LD priceRange** — Changed from `₹` (inexpensive) to `₹₹` (moderate) across all 5 marketing pages
+- [x] **FAQ Answers** — Homepage FAQ fee answers updated to ₹40K–80K range
+
 ---
 
 ## 7. Known Issues & Bugs
