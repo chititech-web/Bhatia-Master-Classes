@@ -50,4 +50,29 @@
     <priority>0.1</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://www.bhatiamasterclasses.com/neet-dropper-batch-ujjain.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.bhatiamasterclasses.com/blog.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.bhatiamasterclasses.com/blog/how-to-prepare-for-jee-mains-in-6-months.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.bhatiamasterclasses.com/blog/neet-biology-important-chapters-2026.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.bhatiamasterclasses.com/blog/jee-dropper-batch-strategy-ujjain.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
