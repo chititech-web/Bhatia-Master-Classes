@@ -97,6 +97,103 @@
     .stat-pill .num { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: var(--accent); display: block; }
     .stat-pill .lbl { font-size: 0.78rem; color: rgba(255,255,255,0.7); font-weight: 500; }
 
+    /* HERO SVG ILLUSTRATION */
+    .hero-visual { display: flex; align-items: center; justify-content: center; position: relative; min-height: 420px; }
+    .hero-svg-wrap { position: relative; width: 380px; height: 380px; }
+
+    /* Pulse rings */
+    .pulse-ring { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; border: 2px solid rgba(244,168,37,0.3); animation: pulseExpand 3s ease-out infinite; }
+    .pulse-ring:nth-child(1) { width: 140px; height: 140px; animation-delay: 0s; }
+    .pulse-ring:nth-child(2) { width: 220px; height: 220px; animation-delay: 0.8s; }
+    .pulse-ring:nth-child(3) { width: 300px; height: 300px; animation-delay: 1.6s; }
+    @keyframes pulseExpand {
+      0% { opacity: 0.7; transform: translate(-50%, -50%) scale(0.8); }
+      100% { opacity: 0; transform: translate(-50%, -50%) scale(1.2); }
+    }
+
+    /* Orbiting icons */
+    .orbit-icon { position: absolute; width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.3); animation: orbitFloat 6s ease-in-out infinite; }
+    .orbit-icon:nth-child(4) { top: 8%; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #16A34A, #15803D); animation-delay: 0s; }
+    .orbit-icon:nth-child(5) { top: 50%; right: 2%; transform: translateY(-50%); background: linear-gradient(135deg, var(--accent), #D4900A); animation-delay: 1.5s; }
+    .orbit-icon:nth-child(6) { bottom: 8%; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--teal), #008080); animation-delay: 3s; }
+    .orbit-icon:nth-child(7) { top: 50%; left: 2%; transform: translateY(-50%); background: linear-gradient(135deg, #8B5CF6, #6D28D9); animation-delay: 4.5s; }
+    @keyframes orbitFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .orbit-icon:nth-child(4) { animation-name: orbitFloatY; }
+    .orbit-icon:nth-child(6) { animation-name: orbitFloatY; }
+    @keyframes orbitFloatY {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-12px); }
+    }
+    .orbit-icon:nth-child(5) { animation-name: orbitFloatX; }
+    .orbit-icon:nth-child(7) { animation-name: orbitFloatX2; }
+    @keyframes orbitFloatX {
+      0%, 100% { transform: translateY(-50%) translateX(0); }
+      50% { transform: translateY(-50%) translateX(-10px); }
+    }
+    @keyframes orbitFloatX2 {
+      0%, 100% { transform: translateY(-50%) translateX(0); }
+      50% { transform: translateY(-50%) translateX(10px); }
+    }
+
+    /* Orbit ring lines */
+    .orbit-ring { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; border: 1px dashed rgba(255,255,255,0.08); pointer-events: none; }
+    .orbit-ring-1 { width: 200px; height: 200px; }
+    .orbit-ring-2 { width: 310px; height: 310px; }
+
+    /* Centre shield */
+    .hero-shield { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), #D4900A); border-radius: 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 40px rgba(244,168,37,0.4); z-index: 2; animation: shieldPulse 4s ease-in-out infinite; }
+    .hero-shield i { font-size: 2.4rem; color: var(--primary-dark); }
+    @keyframes shieldPulse {
+      0%, 100% { box-shadow: 0 8px 40px rgba(244,168,37,0.4); }
+      50% { box-shadow: 0 8px 60px rgba(244,168,37,0.6), 0 0 80px rgba(244,168,37,0.2); }
+    }
+
+    /* Floating particles */
+    .hero-particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .h-particle { position: absolute; color: rgba(255,255,255,0.12); font-size: 1rem; animation: particleDrift linear infinite; }
+    .h-particle:nth-child(1) { left: 10%; animation-duration: 12s; animation-delay: 0s; font-size: 0.8rem; }
+    .h-particle:nth-child(2) { left: 25%; animation-duration: 15s; animation-delay: 2s; font-size: 1.2rem; }
+    .h-particle:nth-child(3) { left: 45%; animation-duration: 10s; animation-delay: 4s; }
+    .h-particle:nth-child(4) { left: 65%; animation-duration: 14s; animation-delay: 1s; font-size: 0.7rem; }
+    .h-particle:nth-child(5) { left: 80%; animation-duration: 11s; animation-delay: 3s; font-size: 1.1rem; }
+    .h-particle:nth-child(6) { left: 92%; animation-duration: 13s; animation-delay: 5s; font-size: 0.9rem; }
+    @keyframes particleDrift {
+      0% { bottom: -30px; opacity: 0; transform: translateX(0) rotate(0deg); }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { bottom: 110%; opacity: 0; transform: translateX(40px) rotate(180deg); }
+    }
+
+    /* Connecting lines between centre and orbit icons */
+    .orbit-line { position: absolute; top: 50%; left: 50%; width: 1px; background: linear-gradient(to bottom, rgba(244,168,37,0.3), transparent); transform-origin: top center; pointer-events: none; }
+
+    /* Floating mini cards */
+    .float-card { position: absolute; background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: rgba(255,255,255,0.9); font-weight: 600; white-space: nowrap; animation: floatCard 5s ease-in-out infinite; pointer-events: none; }
+    .float-card i { font-size: 1rem; }
+    .float-card-1 { top: 12%; right: -5%; animation-delay: 0s; }
+    .float-card-2 { bottom: 18%; left: -8%; animation-delay: 2s; }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (max-width: 991px) {
+      .hero-visual { min-height: 280px; margin-top: 32px; }
+      .hero-svg-wrap { width: 280px; height: 280px; }
+      .pulse-ring:nth-child(1) { width: 100px; height: 100px; }
+      .pulse-ring:nth-child(2) { width: 160px; height: 160px; }
+      .pulse-ring:nth-child(3) { width: 220px; height: 220px; }
+      .hero-shield { width: 72px; height: 72px; border-radius: 18px; }
+      .hero-shield i { font-size: 1.8rem; }
+      .orbit-icon { width: 40px; height: 40px; font-size: 1rem; border-radius: 10px; }
+      .orbit-ring-1 { width: 140px; height: 140px; }
+      .orbit-ring-2 { width: 220px; height: 220px; }
+      .float-card { display: none; }
+    }
+
     /* SECTION HEADERS */
     .section-header { margin-bottom: 48px; }
     .section-label { display: inline-block; background: rgba(27,58,107,0.08); color: var(--primary); border: 1px solid rgba(27,58,107,0.15); padding: 4px 14px; border-radius: 100px; font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
@@ -348,9 +445,18 @@
 <section id="hero" aria-label="NEET Counselling Hero">
   <div class="hero-glow"></div>
   <div class="hero-glow-2"></div>
+  <!-- Floating particles -->
+  <div class="hero-particles">
+    <span class="h-particle"><i class="bi bi-heart-pulse"></i></span>
+    <span class="h-particle"><i class="bi bi-capsule"></i></span>
+    <span class="h-particle"><i class="bi bi-dna"></i></span>
+    <span class="h-particle"><i class="bi bi-clipboard2-pulse"></i></span>
+    <span class="h-particle"><i class="bi bi-lungs"></i></span>
+    <span class="h-particle"><i class="bi bi-shield-plus"></i></span>
+  </div>
   <div class="container position-relative" style="z-index:1;">
     <div class="row align-items-center g-5">
-      <div class="col-lg-7">
+      <div class="col-lg-6">
         <div class="hero-badge reveal">
           <i class="bi bi-award-fill" style="font-size:0.75rem;"></i>
           NEET Counselling 2026
@@ -366,10 +472,40 @@
           </a>
         </div>
         <div class="hero-stats reveal">
-          <div class="stat-pill"><span class="num">3</span><span class="lbl">Packages</span></div>
-          <div class="stat-pill"><span class="num">500+</span><span class="lbl">Students Guided</span></div>
-          <div class="stat-pill"><span class="num">12+</span><span class="lbl">Years Experience</span></div>
-          <div class="stat-pill"><span class="num">90%</span><span class="lbl">Success Rate</span></div>
+          <div class="stat-pill"><span class="num" data-target="500" data-suffix="+">0</span><span class="lbl">Students Guided</span></div>
+          <div class="stat-pill"><span class="num" data-target="12" data-suffix="+">0</span><span class="lbl">Years Experience</span></div>
+          <div class="stat-pill"><span class="num" data-target="90" data-suffix="%">0</span><span class="lbl">Success Rate</span></div>
+          <div class="stat-pill"><span class="num" data-target="30" data-suffix="+">0</span><span class="lbl">College Partners</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-visual reveal">
+          <!-- Floating info cards -->
+          <div class="float-card float-card-1">
+            <i class="bi bi-check-circle-fill" style="color:#16A34A;"></i> Seat Allotted
+          </div>
+          <div class="float-card float-card-2">
+            <i class="bi bi-graph-up-arrow" style="color:var(--accent);"></i> Rank Improved
+          </div>
+          <!-- Main SVG illustration -->
+          <div class="hero-svg-wrap">
+            <!-- Pulse rings -->
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring"></div>
+            <!-- Orbit guide rings -->
+            <div class="orbit-ring orbit-ring-1"></div>
+            <div class="orbit-ring orbit-ring-2"></div>
+            <!-- Centre shield -->
+            <div class="hero-shield">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <!-- Orbiting icons -->
+            <div class="orbit-icon"><i class="bi bi-people-fill"></i></div>
+            <div class="orbit-icon"><i class="bi bi-trophy-fill"></i></div>
+            <div class="orbit-icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <div class="orbit-icon"><i class="bi bi-clipboard2-check-fill"></i></div>
+          </div>
         </div>
       </div>
     </div>
@@ -823,9 +959,36 @@ function handleReveal() {
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight - 60) el.classList.add('visible');
   });
+  animateCounters();
 }
 window.addEventListener('scroll', handleReveal);
 window.addEventListener('load', handleReveal);
+
+/* ========== ANIMATED COUNTERS ========== */
+let countersAnimated = false;
+function animateCounters() {
+  if (countersAnimated) return;
+  const counters = document.querySelectorAll('.stat-pill .num[data-target]');
+  if (counters.length === 0) return;
+  const first = counters[0];
+  const rect = first.getBoundingClientRect();
+  if (rect.top > window.innerHeight || rect.bottom < 0) return;
+  countersAnimated = true;
+  counters.forEach(el => {
+    const target = parseInt(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const duration = 2000;
+    const startTime = performance.now();
+    function update(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(target * eased) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
 
 /* ========== FAQ TOGGLE ========== */
 function toggleFaq(btn) {
